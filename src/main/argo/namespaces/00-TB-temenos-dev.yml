@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: TriggerBinding
+metadata:
+  name: temenos-dev-triggerbinding
+  namespace: temenos-dev
+spec:
+  params:
+    - name: git-repo-url
+      value: $(body.repository.url)
+    - name: git-revision
+      value: $(body.head_commit.id)

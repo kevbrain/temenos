@@ -1,0 +1,12 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: {{ocp-namespace}}
+  name: temenos-secret-0
+  labels:
+    app: temenos    
+stringData:  
+  actuator.password: {{actuator.password}}
+type: Opaque
+---
+ 

@@ -1,0 +1,11 @@
+apiVersion: triggers.tekton.dev/v1alpha1
+kind: Trigger
+metadata:
+  name: temenos-dev-trigger
+  namespace: temenos-dev
+spec:
+  serviceAccountName: pipeline
+  bindings:
+    - ref: temenos-dev-triggerbinding
+  template:
+    ref: temenos-dev-triggertemplate
